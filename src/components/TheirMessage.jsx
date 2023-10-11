@@ -8,6 +8,8 @@ const TheirMessage = ({ lastMessage, message }) => {
             className="message-avatar"
             style={{ backgroundImage: message.sender && `url(${message.sender.avatar})` }}
           />
+
+          
         )}
         {message.attachments && message.attachments.length > 0
           ? (

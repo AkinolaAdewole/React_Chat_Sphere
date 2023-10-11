@@ -7,6 +7,8 @@ const MyMessage = ({ message }) => {
           className="message-image"
           style={{ float: 'right' }}
         />
+
+        
       );
     }
   
