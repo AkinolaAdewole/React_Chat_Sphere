@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 
 // Define a constant variable for the Chat Engine project ID (You should replace it with your actual project ID)
-const projectID = "11a880eb-2922-49ae-9def-260e328ee01a";
+const projectID = " 11a880eb-2922-49ae-9def-260e328ee01a";
 
 const Modal = () => {
   // Define and initialize state variables for username, password, and error messages
@@ -15,7 +15,8 @@ const Modal = () => {
     e.preventDefault(); // Prevent the default form submission behavior (page refresh)
 
     // Create an authentication object with Project-ID, User-Name, and User-Secret
-    const authObject = { 'Project-ID': projectID, 'User-Name': username, 'User-Secret': password };
+    const authObject = { 'Project-ID': '11a880eb-2922-49ae-9def-260e328ee01a', 'User-Name': username, 'User-Secret': password };
+    console.log(username); // Log the username to the console
 
     try {
       // Attempt to make an HTTP GET request to retrieve chats with provided authentication headers
@@ -24,7 +25,7 @@ const Modal = () => {
       // If the request is successful, store the username and password in localStorage
       localStorage.setItem('username', username);
       localStorage.setItem('password', password);
-      console.log(username); // Log the username to the console
+      
 
       window.location.reload(); // Refresh the window
       setError(''); // Clear any previous error messages
