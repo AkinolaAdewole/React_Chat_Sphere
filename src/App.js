@@ -4,13 +4,14 @@ import ChatFeed from './components/ChatFeed';
 import LoginForm from './components/LoginForm';
 import './App.css';
 
+const projectID= "11a880eb-2922-49ae-9def-260e328ee01a"
 function App() {
   if (!localStorage.getItem('username')) return <LoginForm />;
   return (
     <>
      <ChatEngine
       height="100vh"
-      projectID= "11a880eb-2922-49ae-9def-260e328ee01a"
+      projectID={projectID}
       userName={localStorage.getItem('username')}
       userSecret={localStorage.getItem('password')}
       renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
